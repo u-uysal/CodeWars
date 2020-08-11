@@ -18,3 +18,26 @@ function DNAStrand(dna) {
   };
   return splitArray.map((x) => pairs[x]).join("");
 }
+
+function XO(str) {
+  let countX = 0;
+  let countO = 0;
+  let splitArray = str.toLowerCase().split("");
+
+  if (splitArray.indexOf("x") === -1 || splitArray.indexOf("o") === -1)
+    return false;
+  if (splitArray.indexOf("x") !== -1 && splitArray.indexOf("o") !== -1) {
+    for (let i = 0; i < splitArray.length; i++) {
+      console.log(splitArray[i]);
+
+      if (splitArray[i] === "x") {
+        countX++;
+      } else if (splitArray[i] === "o") {
+        countO++;
+      }
+    }
+  }
+  return countX === countO;
+
+  //code here
+}
