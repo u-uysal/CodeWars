@@ -41,3 +41,11 @@ function XO(str) {
 
   //code here
 }
+
+function removeChar(str) {
+  let newar = str.split("");
+  newar.shift();
+  newar.pop();
+  return newar.join("");
+  //You got this!
+}
