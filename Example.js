@@ -49,3 +49,17 @@ function removeChar(str) {
   return newar.join("");
   //You got this!
 }
+
+function sortArray(array) {
+  let newAr = array.filter((item) => item % 2 === 1);
+  let indexArray = newAr.map((item) => array.indexOf(item));
+
+  let sortedArray = newAr.sort((a, b) => a - b);
+
+  for (let i = 0; i < indexArray.length; i++) {
+    array[indexArray[i]] = sortedArray[i];
+  }
+
+  // Return a sorted array.
+  return array;
+}
